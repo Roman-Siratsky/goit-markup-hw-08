@@ -632,6 +632,12 @@ button {
   }
 }
 
+@media screen and (max-width: 479px) {
+  .main-form {
+    width: 100%;
+  }
+}
+
 .modal-window {
   position: relative;
   position: absolute;
@@ -653,6 +659,13 @@ button {
   .modal-window {
     width: 528px;
     height: 581px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .modal-window {
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -999,7 +1012,6 @@ button {
 
 .paragraph .sub-para {
   list-style-type: none;
-  width: 450px;
 }
 
 @media screen and (max-width: 768px) {
@@ -1024,7 +1036,7 @@ button {
 .paragraph .sub-para::before {
   display: inline-block;
   content: '';
-  width: 450px;
+  width: 100%;
   height: 120px;
   background-color: #F5F4FA;
   border-radius: 4px;
@@ -1177,6 +1189,12 @@ button {
   }
 }
 
+@media screen and (max-width: 479px) {
+  .card-hover .blank {
+    width: 100%;
+  }
+}
+
 .overfl-block {
   position: absolute;
   width: 450px;
@@ -1193,6 +1211,13 @@ button {
 @media screen and (min-width: 1200px) {
   .overfl-block {
     width: 370px;
+    height: 306px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .overfl-block {
+    width: 100%;
   }
 }
 
@@ -1227,6 +1252,14 @@ button {
 @media screen and (min-width: 1200px) {
   .overfl-block .appear-block {
     width: 370px;
+    height: 306px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .overfl-block .appear-block {
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -1250,7 +1283,6 @@ button {
 
 .description .text {
   color: #212121;
-  width: 322px;
   height: 36px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
@@ -1263,7 +1295,6 @@ button {
 .description .sub-text {
   font-family: "Roboto", sans-serif;
   color: #757575;
-  width: 322px;
   height: 30px;
   font-style: normal;
   font-weight: 400;
@@ -1682,7 +1713,6 @@ button {
 
 .footer-form .footer-input {
   outline: none;
-  width: 450px;
   margin-bottom: 20px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1737,6 +1767,13 @@ button {
   .footer-form .subscribe {
     margin-right: 0;
     margin-left: 12px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .footer-form .subscribe {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -2105,5 +2142,25 @@ img {
   display: block;
   width: 100%;
   height: auto;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 479px) {
+  .fl-container,
+  .intro-container {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
