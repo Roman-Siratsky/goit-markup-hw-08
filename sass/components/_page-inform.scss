@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.inform-section{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @media screen and(min-width:1200px) {
+        padding-bottom: 94px;
+        padding-top: 94px;
+    }
+    .fl-container{
+        width: 480px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        @media screen and(min-width:768px) {
+            width: 768px;
+        }
+        @media screen and(min-width:1200px) {
+            width: 1200px;
+        }
+    }
+}
+.paragraph{
+    @media screen and(min-width:768px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+    .sub-para{
+        list-style-type: none;
+        width: 450px;
+        @media screen and(max-width:768px) {
+            &:nth-child(-n+3){
+                margin-bottom: 30px;
+            }
+        }
+        @media screen and(min-width:768px) {
+            width: 354px;
+            margin: 15px;
+        }
+        @media screen and(min-width:1200px){
+            width: 270px;
+        }
+        &::before{
+            display: inline-block;
+            content: '';
+            width: 450px;
+            @media screen and(min-width:768px) {
+                width: 354px;
+            }
+            @media screen and(min-width:1200px) {
+                width: 270px;
+            }
+            height: 120px;
+            background-color: $button-color;
+            border-radius: 4px;
+            margin-bottom: 30px;
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+        }
+        .title-h3{
+            text-align: center;
+            @media screen and(min-width:768px) {
+                text-align: left;                
+            }
+            margin-bottom: 10px;
+            color: $black-color;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+        .text0{
+            color: $second-color;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 0.03em;
+        }
+    }
+    .obj1{
+        &::before{
+            background-image: url('../img/antenna 1.svg');
+        }
+    }
+    .obj2{
+        &::before{
+            background-image: url('../img/clock 1.svg');
+        }
+    }
+    .obj3{
+        &::before{
+            background-image: url('../img/diagram 1.svg');
+        }
+    }
+    .obj4{
+        &::before{
+            background-image: url('../img/astronaut 1.svg');
+        }
+    }
+}

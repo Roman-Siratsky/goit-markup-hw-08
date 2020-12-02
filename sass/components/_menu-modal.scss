@@ -1,0 +1,115 @@
+.back-drop{
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    height: 100%;
+    right: 50%;
+    left: 50%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    overflow-y: scroll;
+    transform: translateX(-50%);
+}
+
+.back-drop.is-hidden{
+    display: none;
+}
+
+.modal{
+    position: absolute;
+    width: 480px;
+    background-color: #fff;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.modal-adr{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modal-list{
+    position: relative;
+    list-style-type: none;
+    text-align: center;
+    margin-bottom: 40px;
+    .modal-item{
+        font-family: $main-font;
+        color: $black-color;
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        letter-spacing: 0.02em;
+        &:hover,
+        &:focus{
+            color: $accent-color;
+        }
+    }
+}
+.modal-line{
+    &::before{
+    content: "";
+    width: 78px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $accent-color;
+    position: absolute;
+    bottom: -8px;
+    right: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+}
+.modal-adr{
+    margin-bottom: -16px;
+    .modal-adr-link{
+        font-family: $main-font;
+        color: $second-color;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        display: inline-flex;
+        margin-bottom: 16px;
+        align-items: center;
+        transition: $main-transition;
+        &:hover,
+        &:focus{
+            color:$accent-color;
+        }
+        &:hover .modal-envelope{
+            fill: $accent-color;
+        }
+        &:hover .modal-smartphone{
+            fill: $accent-color;
+        }
+        .modal-envelope{
+            width: 16px;
+            height: 12px;
+            margin-right: 10px;
+            fill: $second-color;
+            transition: $main-transition;
+            &:hover,
+            &:focus{
+                fill: $accent-color;
+            }
+        }
+        .modal-smartphone{
+            width: 10px;
+            height: 15px;
+            margin-right: 10px;
+            transition: $main-transition;
+            fill: $second-color;
+            &:hover,
+            &:focus{
+                fill: $accent-color;
+            }
+        }
+    }
+}

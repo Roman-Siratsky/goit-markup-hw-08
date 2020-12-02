@@ -1,0 +1,181 @@
+.footer-section{
+    background: $footer-color;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    .linear{
+        text-align: center;
+        width: 480px;
+        padding-left: 15px;
+        padding-right: 15px;
+        @media screen and(min-width:768px) {
+            width: 768px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @media screen and(min-width:1200px) {
+            width: 1200px;
+            flex-wrap: nowrap;
+        }
+    }
+}
+.footer-container{
+    @media screen and(min-width:768px) {
+        margin-right: 165px;
+    }
+    @media screen and(min-width:1200px) {
+        margin-right: 70px;
+        text-align: left;
+    }
+}
+.end{
+    .span1{
+        text-decoration: none;
+        font-family: $main-font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.03em;
+        .footer-position{
+            color: $main-color;
+            text-decoration: none;
+        }
+        .footer-item{
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+        }
+        }
+    .sp{
+        margin-top: 8px;
+        @media screen and(min-width:1200px) {
+            margin-top: 9px;
+        }
+    }
+}
+    
+
+.block{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    @media screen and(min-width:768px) {
+        margin-top: 5px;
+    }
+    @media screen and(min-width:1200px) {
+        margin-right: 93px;
+    }
+    .invite{
+        margin-bottom: 20px;
+        font-family: $main-font;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: $main-color;
+        margin-top: 0px;
+    }
+}
+.footer-links{
+    display: flex;
+    justify-content: center;
+    .link{
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        padding-top: 12px;
+        display: flex;
+        justify-content: center;
+        transition: $main-transition;
+        &:hover,
+        &:focus{
+            background-color: $accent-color;
+        }
+        &:nth-child(-n+3){
+            margin-right: 10px;
+        }
+        &:hover .footer-link{
+            fill: $main-color;
+        }
+        .footer-link{
+            fill: $main-color;
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .back{
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+.block-margin{
+    margin-bottom: 0;
+    @media screen and(min-width:768px) {
+        margin-top: 42px;
+    }
+    @media screen and(min-width:1200px) {
+        margin-right: 0;
+        margin-top: 5px;
+    }
+}
+.footer-form{
+    @media screen and(min-width:1200px) {
+        display: flex;
+    }
+    .footer-input{
+        outline: none;
+        width: 450px;
+        margin-bottom: 20px;
+        height: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+        padding-left: 16px;
+        margin-top: 0;
+        background: $footer-color;
+        color: $main-color;
+        @media screen and(min-width:1200px) {
+            width: 358px;
+        }
+    }
+    .subscribe{
+        margin-right: 125px;
+        margin-left: 125px;
+        @media screen and(min-width:1200px) {
+            margin-right: 0;
+            margin-left: 12px;
+        }
+        position: relative;
+        width: 200px;
+        height: 50px;
+        font-family: $main-font;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 30px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.06em;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        color: $main-color;
+        background-color: $accent-color;
+        padding-left: 29px;
+        transition: $main-transition;
+        outline: none;
+        &:hover,
+        &:focus{
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+            padding-left: 28px;
+        }
+        .footer-send{
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: 13px;
+            right: 28px;
+        }
+    }
+}

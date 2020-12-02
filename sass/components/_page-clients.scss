@@ -1,0 +1,96 @@
+.clients-section{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @media screen and(min-width:1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+    .fl-container{
+        width: 480px;
+        padding-left: 15px;
+        padding-right: 15px;
+        @media screen and(min-width:768px) {
+            width: 768px;
+        }
+        @media screen and(min-width:1200px) {
+            width: 1200px;
+        }
+        .h23{
+            font-family: $main-font;
+            font-size: 28px;
+            line-height: 33px;
+            text-align: center;
+            letter-spacing: 0.03em;
+            font-weight: 700;
+            color: $black-color;
+            margin-bottom: 30px;
+            @media screen and(min-width:1200px) {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+.lists{
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+    .list-item{
+        display: flex;
+        justify-content: center;
+        transition: $main-transition;
+        width: 210px;
+        height: 90px;
+        border: 1px solid $social-fill;
+        border-radius: 4px;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: 15px;
+        @media screen and(min-width:768px) {
+            width: 226px;
+        }
+        @media screen and(min-width:1200px) {
+            width: 170px;
+        }
+        &:hover,
+        &:focus{
+            border: 1px solid $accent-color;
+        }
+        &:hover .partner{
+            fill: $accent-color;
+        }
+        .partner{
+            fill: $social-fill;
+            transition: $main-transition;
+        }
+        .tag1{
+            width: 44.27px;
+            height: 49.23px;
+            margin-top: 20px;
+        }
+        .tag2{
+            width: 40px;
+            height: 52px;
+            margin-top: 19px;
+        }
+        .tag3{
+            width: 41px;
+            height: 42.6px;
+            margin-top: 24px;
+        }
+        .tag4{
+            width: 79.66px;
+            height: 42.02px;
+            margin-top: 24px;
+        }
+        .tag5{
+            width: 59px;
+            height: 47px;
+            margin-top: 22px;
+        }
+        .tag6{
+            width: 88.48px;
+            height: 45.44px;
+            margin-top: 22px;
+        }
+    }
+}

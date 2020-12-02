@@ -1,0 +1,267 @@
+input{
+    margin-top: 4px;
+}
+textarea{
+    margin-top: 4px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: $main-font;
+    text-decoration: none;
+}
+button{
+    outline: none;
+    border: none;
+}
+
+.overlay{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+.overlay.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+.main-form{
+    width: 370px;
+    @media screen and(min-width:1200px) {
+        width: 461.7px;
+    }
+}
+.modal-window{
+    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 450px;
+    height: 609px;
+    @media screen and(min-width:1200px) {
+        width: 528px;
+        height: 581px;   
+    }
+    background-color: $main-color;
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @media screen and(max-width:768px) {
+        overflow-y: scroll;   
+    }
+    .link-btn{
+        position: relative;
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background-image: url('../img/close-btn.svg');
+        width: 30px;
+        height: 30px;
+        background-color: $main-color;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: $main-transition;
+        &:hover,
+        &:focus{
+            cursor: pointer;
+            background-color: $main-color;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+            background-image: url('../img/bg-close.svg');
+        }
+    }
+}
+.js-speaker-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.perenos{
+    height: 23px;
+}
+.form-text{
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    @media screen and(min-width:1200px) {
+        line-height: 23px;
+    }
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $black-color;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    position: relative;
+    .form-label{
+        text-align: left;
+        font-family: $main-font;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+        color: $second-color;
+    }
+    .form-input{
+        height: 40px;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        outline: none;
+        padding-left: 42px;
+        transition: $main-transition;
+        &:hover,
+        &:focus{
+            border: 1px solid $accent-color;
+        }
+        &:hover{
+            cursor:pointer;
+        }
+        &:hover + .personal-icon,
+        &:focus + .personal-icon{
+            fill: $accent-color;
+        }
+    }
+    .personal-icon{
+        position: absolute;
+        bottom: 11px;
+        left: 12px;
+        width: 18px;
+        height: 18px;
+        fill: $true-black;
+        transition: $main-transition;
+    }
+    .comment-area{
+        padding-top: 12px;
+        padding-bottom: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-bottom: 11px;
+        @media screen and(min-width:1200px) {
+            margin-bottom: 0;
+        }
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        outline: none;
+        resize: none;
+        height: 120px;
+        transition: $main-transition;
+        &:focus,
+        &:hover{
+            border: 1px solid $accent-color;
+        }
+    }
+}
+.first-name{
+    margin-top: 12px;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    .group-1{
+        margin-top: 10px;
+    }
+}
+.policy-label{
+    display: flex;
+    align-items: center;
+    font-family: var(--main-font);
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    @media screen and(min-width:1200px){
+        font-size: 14px;
+        line-height: 24px;
+    }
+    letter-spacing: 0.03em;
+    color: $second-color;
+    .check-box{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -o-appearance:none;
+            appearance: none;
+        position: absolute;
+        &:checked + .checkbox-icon{
+            border-color:$accent-color;
+            background-color: $accent-color;
+            background-image: url('../img/icon-check.svg');
+            background-size: contain;
+            background-origin: border-box;
+        }
+    }
+    .checkbox-icon{
+        display: inline-block;
+        width: 16px;
+        height: 15px;
+        border: 2px solid $true-black;
+        border-radius: 4px;
+        margin-right: 8px;
+        transition: $main-transition;
+    }
+    .policy-link{
+        font-family:$main-font;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        @media screen and(min-width:1200px){
+            font-size: 14px;
+            line-height: 24px;
+        }
+        letter-spacing: 0.03em;
+        color: $accent-color;
+        text-decoration: underline;
+        margin-left: 4px;
+    }
+}
+.btn-control{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .submit-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: $accent-color;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        color: #fff;
+        margin-top: 31px;
+        @media screen and(min-width:1200px){
+            margin-top: 40px;
+        }
+        cursor: pointer;
+        width: 200px;
+        height: 50px;
+        font-family: $main-font;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 30px;
+        transition: $main-transition;
+        outline: none;
+        &:hover,
+        &:focus{
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+        }
+    }
+}
+

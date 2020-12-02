@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+// @import './base/normalize';
+@import './utils/variables';
+@import './components/logo';
+@import './components/page-header';
+@import './components/page-intro';
+@import './components/filters';
+@import './components/modal-window';
+@import './components/page-inform';
+@import './components/portfolio-content';
+@import './components/page-deals';
+// @import './components/page-team';
+@import './components/page-clients';
+@import './components/page-footer';
+@import './components/page-team';
+@import './components/menu-modal';
+
+
+
+.header-section,
+.intro-section,
+.inform-section,
+.deals-section,
+.team-section,
+.content-sect,
+.buttons-section,
+.clients-section,
+.footer-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.deals-section{
+    @media(max-width:1200px){
+        display: none;
+    }
+}
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+    // height: auto;
+}
